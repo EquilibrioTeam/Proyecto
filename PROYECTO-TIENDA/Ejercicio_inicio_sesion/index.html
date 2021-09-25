@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio de Sesión</title>
+    <link rel="stylesheet" href="./css/style.css" href="https://fonts.googleapis.com/css?family=Font+Name">
+</head>
+<body>
+    <main>
+        <section>
+            <figure class="cont_logo">
+            </figure>
+            <figure class="letras_logo">
+            </figure>
+        </section>
+        <section class="Contenedor_form">
+        <form action="" class="Formulario">
+            <label for="usuario">
+                <span id="titulo">Bienvenido</span>
+                <!-- <span class="Lineas_Texto">Nombre de Usuario</span> -->
+                <br>
+                <input type="text" id="nombre" name="usuario" required class="Input_Texto" placeholder="correo@xx.com "/>
+            </label>
+            <label for="contrasena">
+                <!--<span class="Lineas_Texto">Contraseña</span>-->
+                <input ctype="password" id="contrasena" name="contrasena" required class="Input_Texto" placeholder="Contraseña"/>
+            </label>
+            <br>
+            <br>
+            <span class="Lineas_Texto">Seleccione el Tipo de Rol</span>
+            <br>
+            <input list="roles" id="lista_roles" required placeholder="Seleccione el Rol">
+            <datalist id="roles">
+                <option value="Administrador"></option>
+                <option value="Vendedor"></option>
+            </datalist>
+            <br><br>
+            <input type="submit" value="Login" id="envio" />
+        </form>
+    </section>
+    </main>
+</body>
+</html>
