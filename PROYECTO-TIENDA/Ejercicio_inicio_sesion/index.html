@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inicio de Sesión</title>
     <link rel="stylesheet" href="./css/style_Inicio_Sesion.css" href="https://fonts.googleapis.com/css?family=Font+Name">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Stick+No+Bills:wght@300&display=swap" rel="stylesheet">
 </head>
 <body>
     <main>
@@ -16,35 +19,37 @@
             </figure>
         </section>
         <section class="Contenedor_form">
-        <form action="" class="Formulario">
-            <label for="usuario">
-                <span id="titulo">Bienvenido</span>
-                <!-- <span class="Lineas_Texto">Nombre de Usuario</span> -->
+            <form action="" class="Formulario">
+                <label for="usuario">
+                    <span id="titulo">Bienvenido</span>
+                    <!-- <span class="Lineas_Texto">Nombre de Usuario</span> -->
+                    <br>
+                    <input type="email" id="nombre" name="usuario" required class="Input_Texto" placeholder="correo@xx.com "/>
+                </label>
+                <label for="contrasena">
+                    <!--<span class="Lineas_Texto">Contraseña</span>-->
+                    <input type="password" id="contrasena" name="contrasena" required class="Input_Texto" placeholder="Contraseña"/>
+                </label>
                 <br>
-                <input type="text" id="nombre" name="usuario" required class="Input_Texto" placeholder="correo@xx.com "/>
-            </label>
-            <label for="contrasena">
-                <!--<span class="Lineas_Texto">Contraseña</span>-->
-                <input type="password" id="contrasena" name="contrasena" required class="Input_Texto" placeholder="Contraseña"/>
-            </label>
-            <br>
-            <br>
-            <span class="Lineas_Texto">Seleccione el Tipo de Rol</span>
-            <br>
-            <input list="roles" id="lista_roles" required placeholder="Seleccione el Rol">
-            <datalist id="roles">
-                <option value="Administrador"></option>
-                <option value="Vendedor"></option>
-            </datalist>
-            <br><br>
-            <input type="submit" value="Login" id="envio" />
-        </form>
+                <br>
+                <span class="Lineas_Texto">Seleccione el Tipo de Rol</span>
+                <br>
+                <input list="roles" id="lista_roles" required placeholder="Seleccione el Rol">
+                <datalist id="roles">
+                    <option value="Administrador"></option>
+                    <option value="Vendedor"></option>
+                </datalist>
+                <br><br>
+                <input type="submit" value="Login" id="envio" />
+
+                <a href="/Ejercicio_inicio_sesion/registro.html"><p id="registro">Registrarse</p></a>
+            
+            </form>
+            
     </section>
     </main>
 </body>
 <footer>
-    <section>
-        <a href="/Ejercicio_inicio_sesion/registro.html"><p id="registro">Registrarse</p></a>
-    </section>
+   
 </footer>
 </html>

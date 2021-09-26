@@ -1,12 +1,12 @@
 /* cont_logo y letras_logo son parte del encabezado*/ 
 .cont_logo
 {
-    margin-top: 110px;
+    margin-top: 105px;
     position: relative;
     width: 120px;
     margin-left: auto;
     margin-right: auto;
-    content: url(/EJERCICIOS/Ejercicio_inicio_sesion/img/Logo.png);
+    content: url(/Ejercicio_inicio_sesion/img/Logo.png);
 }
 
 .letras_logo
@@ -14,10 +14,10 @@
     position: relative;
     margin-left: auto;
     margin-right: auto;
-    margin-top: -25px;
+    margin-top: -30px;
     width: 300px;
     height: 50%;
-    content: url(/EJERCICIOS/Ejercicio_inicio_sesion/img/Tipo.png);
+    content: url(/Ejercicio_inicio_sesion/img/Tipo.png);
 }
 
 /*Contenido General de la página*/
@@ -67,7 +67,7 @@ body
 
 span
 {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Stick No Bills', sans-serif, Verdana, sans-serif;
     font-size: 50px;
     color:rgb(150, 196, 248);
 }

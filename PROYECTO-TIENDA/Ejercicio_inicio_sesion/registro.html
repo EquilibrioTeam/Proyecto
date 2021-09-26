@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registro</title>
     <link rel="stylesheet" href="./css/style_registro.css" href="https://fonts.googleapis.com/css?family=Font+Name">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Stick+No+Bills:wght@300&display=swap" rel="stylesheet">
 </head>
 <body>
     <main>
@@ -18,7 +21,7 @@
         <!-- Desde esta sección inicia el cuerpo del formulario-->
         <section class="Contenedor_form">
             <span>Registro</span>
-            <form action="" class="registro">
+            <form action="get" class="registro">
                 <label for="nombre">
                     <input type="text" id="nombre" required placeholder="Nombre y Apellido" class="input_texto" title="Un nombre y Primer Apellido"/>
                 </label>
@@ -28,7 +31,7 @@
                 </label>
                 <br>
                 <label for="celular">
-                    <input type="text" id="celular" required placeholder="Número de Celular" class="input_texto" title="Número de Celular"/>
+                    <input type="number" id="celular" required placeholder="Número de Celular" class="input_texto" title="Número de Celular" min="10" max="10"/>
                 </label>
                 <br>
                 <label for="email">
