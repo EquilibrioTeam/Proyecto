@@ -58,6 +58,7 @@ body
     margin-top: 10px;
     width: 270px;
     height: 40px;
+    border-radius: 5px;
     font-size: large;
     font-family: monospace;
     text-align: center;
