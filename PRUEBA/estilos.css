@@ -34,8 +34,7 @@
   padding:10px;
 }
 
-.logo
-{
+.logo{
   float: left;
   content: url(/PRUEBA/images/Logotipo.png);
   width: 15%;
