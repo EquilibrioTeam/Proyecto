@@ -3,7 +3,10 @@
   margin: 0;
   padding: 0;
 }
-<<<<<<< HEAD
+.menu{
+  width: 80%;
+  float: right;
+}
 .menu input[type=text] {
   
   float: none;
@@ -30,10 +33,10 @@
   display:inline-block;
   padding:10px;
 }
-=======
 
 .logo
 {
+  float: left;
   content: url(/PRUEBA/images/Logo.png);
   width: 8%;
   height: 8%;
@@ -42,6 +45,7 @@
 
 .tipo
 {
+  float: left;
   /*margin-top: 20px;*/
   content: url(/PRUEBA/images/Tipo.png);
   width: 13%;
