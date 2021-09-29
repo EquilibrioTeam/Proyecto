@@ -3,7 +3,14 @@
   margin: 0;
   padding: 0;
 }
+<<<<<<< HEAD
 
+=======
+.menu{
+  width: 80%;
+  float: right;
+}
+>>>>>>> b3f5f5b04b3f4b0833bf217161c0c60b174069db
 .menu input[type=text] {
   
   float: none;
@@ -30,10 +37,14 @@
   display:inline-block;
   padding:10px;
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> b3f5f5b04b3f4b0833bf217161c0c60b174069db
 
 .logo
 {
+  float: left;
   content: url(/PRUEBA/images/Logo.png);
   width: 8%;
   height: 8%;
@@ -42,6 +53,7 @@
 
 .tipo
 {
+  float: left;
   /*margin-top: 20px;*/
   content: url(/PRUEBA/images/Tipo.png);
   width: 13%;
