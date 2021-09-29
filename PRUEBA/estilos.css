@@ -4,4 +4,19 @@
   padding: 0;
 }
 
+.logo
+{
+  content: url(/PRUEBA/images/Logo.png);
+  width: 8%;
+  height: 8%;
+  margin-left: 2.5%;
+}
+
+.tipo
+{
+  /*margin-top: 20px;*/
+  content: url(/PRUEBA/images/Tipo.png);
+  width: 13%;
+  height: 13%;
+}
 
