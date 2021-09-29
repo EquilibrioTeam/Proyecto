@@ -4,7 +4,7 @@
   padding: 0;
 }
 .menu{
-  width: 80%;
+  width: 85%;
   float: right;
 }
 .menu input[type=text] {
@@ -37,19 +37,9 @@
 .logo
 {
   float: left;
-  content: url(/PRUEBA/images/Logo.png);
-  width: 8%;
-  height: 8%;
-  margin-left: 2.5%;
+  content: url(/PRUEBA/images/Logotipo.png);
+  width: 15%;
+  height: 100%;
 }
 
-.tipo
-{
-  float: left;
-  /*margin-top: 20px;*/
-  content: url(/PRUEBA/images/Tipo.png);
-  width: 13%;
-  height: 13%;
-
-}
 
