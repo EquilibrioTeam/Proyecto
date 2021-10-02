@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-compatible" content="ie=edge">
+    <link rel="stylesheet" href="Style.css">
+    <title>Registro de productos</title>
+</head>
+<body>
+    <form id= "formulario"class="registro_productos">
+        <h4> Registro de productos</h4>
+        <input class="controls" type="text" name = "nombre_producto" id="nombre_producto" placeholder="Ingrese el nombre del producto">
+        <input class="controls" type="text" name = "tipo_producto" id="tipo_producto" placeholder="Ingrese el tipo de producto">  
+        <input class="controls" type="text" name = "referencia_producto" id="referencia_producto" placeholder="Ingrese la referencia del producto">  
+        <input class="controls" type="text" name = "talla_producto" id="talla_producto" placeholder="Ingrese la talla del producto">
+        <input class="controls" type="text" name = "marca_producto" id="marca_producto" placeholder="Ingrese la marca del producto">
+        <p>Porfavor ingrese la informacion del producto a registrar</p>
+        <button onclick= confirmacion()>Registrar producto</button>
+    </form>
+    <section class = "tabla_productos">    
+        <table id= "id_tabla_productos" >
+            <tr>
+                <th>
+                    Nombre del producto
+                </th>
+                <th>
+                    Tipo de producto
+                </th>
+                <th>
+                    Referencia del producto
+                </th>
+                <th>
+                    Talla del producto
+                </th>            
+                <th>
+                    Marca del producto
+                </th>                    
+            </tr>
+            <tr>
+                <td>
+                    Adidas Performance Coreracer  
+                </td>
+                <td>
+                    Zapatilla
+                </td>
+                <td>
+                    AD858SH62YNDCO
+                </td>
+                <td>
+                    41
+                </td>
+                <td>
+                    Adidas
+                </td>
+            </tr>        
+
+        </table>
+    </section>
+    <script>
+        const form = document.getElementById("formulario")
+        form.addEventListener("submit", function(event){
+            event.preventDefault();
+            let transactionFormData = new FormData(form);
+            let transactionTableRef = document.getElementById("id_tabla_productos");
+            
+        }
+        )
+        function confirmacion(){
+            alert("Se ha registrado el producto exitosamente")
+            //let transactionFormData = new FormData(form);
+           // console.log(form.querySelector("#nombre_producto").value)
+           //let transactionTableRef = document.getElementById("tabla_productos")
+           //console.log(transactionTableRef)
+
+        }
+    </script>
+</body>   
+</html>
