@@ -25,7 +25,8 @@ body{
     margin-left: 100px;
     border-radius: 4px;
     font-family: 'calibri';
-    color : white
+    color : white;
+    box-shadow: 7px 20px 37px #00718b;
 }
 .registro_productos h4{
     font-size: 22px;
@@ -69,7 +70,8 @@ body{
     margin-left: 700px;
     border-radius: 4px;
     font-family: 'calibri';
-    color : white
+    color : white;
+    box-shadow: 7px 20px 37px #00718b;
 }
 
 .tabla_productos th{

@@ -54,20 +54,30 @@
                     Adidas
                 </td>
             </tr>        
-
         </table>
     </section>
     <script>
         const form = document.getElementById("formulario")
         form.addEventListener("submit", function(event){
             event.preventDefault();
-            let transactionFormData = new FormData(form);
-            let transactionTableRef = document.getElementById("id_tabla_productos");
-            
+             
         }
         )
         function confirmacion(){
-            alert("Se ha registrado el producto exitosamente")
+            let transactionFormData = new FormData(form);
+            alert('Se ha registrado el producto "'+form.querySelector("#tipo_producto").value+' '+form.querySelector("#nombre_producto").value+'" exitosamente')
+            let transactionTableRef = document.getElementById("id_tabla_productos");
+            let newTransactionRowRef = transactionTableRef.insertRow(-1)
+            let newTypeCellRef = newTransactionRowRef.insertCell(0)
+            newTypeCellRef.textContent= form.querySelector("#nombre_producto").value
+            newTypeCellRef = newTransactionRowRef.insertCell(1)
+            newTypeCellRef.textContent= form.querySelector("#tipo_producto").value
+            newTypeCellRef = newTransactionRowRef.insertCell(2)
+            newTypeCellRef.textContent= form.querySelector("#referencia_producto").value            
+            newTypeCellRef = newTransactionRowRef.insertCell(3)
+            newTypeCellRef.textContent= form.querySelector("#talla_producto").value       
+            newTypeCellRef = newTransactionRowRef.insertCell(4)
+            newTypeCellRef.textContent= form.querySelector("#marca_producto").value               
             //let transactionFormData = new FormData(form);
            // console.log(form.querySelector("#nombre_producto").value)
            //let transactionTableRef = document.getElementById("tabla_productos")
