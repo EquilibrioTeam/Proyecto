@@ -69,7 +69,7 @@ section {
 
 .contenido-usuarios {
   height: 100vh;
-  background: rgba(205, 216, 194, 1);
+  background: rgb(205, 216, 194);
   top: 0;
 }
 
@@ -99,6 +99,13 @@ td {
   font-size: 14px;
 }
 
+.contenido-usuarios .act-btn{
+  
+  border-top: 1px solid rgb(205, 216, 194);
+  border-right: 1px solid rgb(205, 216, 194);
+  border-bottom: 1px solid rgb(205, 216, 194);
+}
+
 .boton {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: 15px;
@@ -109,10 +116,11 @@ td {
   display: flex;
   float: right;
   background: rgb(7, 142, 145);
-  padding: 5px;
-  width: 150px;
+  padding: 4px;
+  width: 90px;
   border-radius: 10px;
   cursor: pointer;
+  
 }
 
 .boton:hover {
@@ -122,9 +130,9 @@ td {
 
 /* -----------------------------ESTILOS PAGINA ACTUALIZACION DATOS----------------- */
 
-.actualizacion {
-  height: 100vh;
-  background: rgba(205, 216, 194, 1);
+.actualizacion { 
+  height: 140vh;
+  background-color: rgb(205, 216, 194);;
   top: 0;
 }
 

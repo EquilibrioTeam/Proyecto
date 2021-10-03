@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,7 +12,7 @@
 </head>
 
 <body>
-    
+
     <div class="barra-lateral">
         <header>
             <img src="../images/logo2.png" alt="logo">
@@ -19,41 +20,52 @@
         <ul>
             <li><a href="administracion.html"><i class="icon-dashboard"></i> Administración</a></i> </li>
             <li><a href="#"><i class="icon-money"></i> Ventas</a></i></li>
-            <li><a href="usuarios.html"><i class="icon-users"></i> Usuarios</a></li>   
-                                                     
-        </ul>        
+            <li><a href="usuarios.html"><i class="icon-users"></i> Usuarios</a></li>
+
+        </ul>
     </div>
 
-    <section>
+    <section id="actualizar">
         <div class="actualizacion">
             <h2>Datos del usuario</h2>
-    
-            <form id= "formulario"class="actualizacion_usuarios">
+
+            <form id="formulario" class="actualizacion_usuarios">
                 <h4> Actualizar Usuario</h4>
-                <input class="controls" type="text"     name = "nombres_usuario"    id="nombres_usuario"    placeholder="Ingrese los nombres del usuario">
-                <input class="controls" type="text"     name = "apellidos_usuario"  id="tipo_producto"      placeholder="Ingrese los apellidos del usuario">  
-                <input class="controls" type="number"   name = "identificación"     id="identificacion"     placeholder="Ingrese la identificación del usuario">  
-                <input class="controls" type="tel"      name = "tel"                id="tel"                placeholder="Ingrese el teléfono del usuario">
-                <input class="controls" type="text"     name = "direccion"          id="direccion"          placeholder="Ingrese la dirección del usuario">
-                <input class="controls" type="email"    name = "email"              id="email"              placeholder="Ingrese el correo electrónico del usuario">
-                <input class="controls" type="text"     name = "rol"                id="rol"                placeholder="Seleccione el rol del usuario">
-                <input class="controls" type="text"     name = "estado"             id="estado"             placeholder="Seleccione el estado del usuario">
+
+
+                <input class="controls" type="text" name="nombres_usuario" id="nombres_usuario"
+                    placeholder="Ingrese los nombres del usuario">
+                <input class="controls" type="text" name="apellidos_usuario" id="tipo_producto"
+                    placeholder="Ingrese los apellidos del usuario">
+                <input class="controls" type="number" name="identificación" id="identificacion"
+                    placeholder="Ingrese la identificación del usuario">
+                <input class="controls" type="tel" name="tel" id="tel" placeholder="Ingrese el teléfono del usuario">
+                <input class="controls" type="text" name="direccion" id="direccion"
+                    placeholder="Ingrese la dirección del usuario">
+                <input class="controls" type="email" name="email" id="email"
+                    placeholder="Ingrese el correo electrónico del usuario">
+                
+                <select class="controls" name="rol"">
+                    <option disabled selected="">Elija un rol</option>
+                    <option>Vendedor</option>
+                    <option>Administrador</option>
+                </select>
+
+                <select class="controls" name="estado">
+                    <option disabled selected="">Estado</option>                     
+                    <option>Pendiente</option>
+                    <option>Activo</option>
+                    <option>Inactivo</option>
+                </select>                        
                 <br>
-                <button onclick= confirmacion()>Guardar</button> 
-            </form> 
-                    
-            
-            
-        </div> 
+                <button onclick=confirmacion()>Guardar</button>
+            </form>
+
+        </div>
     </section>
 
-    
-    
 
-    
 
-    
-               
-    
 </body>
+
 </html>
