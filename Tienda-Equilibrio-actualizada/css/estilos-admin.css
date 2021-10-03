@@ -19,7 +19,7 @@ body {
   top: 0;
   width: 275px;
   height: 100%;
-  background: rgba(20, 167, 179, 1);
+  background: rgb(0, 26, 63);
   transition: all 0.5s ease;
 }
 
@@ -28,7 +28,7 @@ body {
   color: #fff;
   text-align: center;
   line-height: 70px;
-  background: rgba(5, 132, 146, 1);
+  background: rgb(139, 164, 177);
   user-select: none;
 }
 
@@ -48,7 +48,8 @@ body {
 
 ul li:hover a {
   padding-left: 50px;
-  background-color: rgba(67, 170, 139, 0.5);
+  background-color: rgba(0, 113, 139, .5);
+  transition: .5s;
 }
 
 .barra-lateral ul a i {
@@ -66,6 +67,40 @@ section {
 }
 
 /* --------------ESTILOS PARA PAGINA DE USUARIOS----------------------- */
+
+.menu-usuarios{  
+  text-align: center;
+}
+
+nav{
+  float: right;
+}
+
+.menu-usuarios nav ul li{
+  margin-top: 20px;
+  margin-right: 50px;
+  margin-left: 25px;
+  padding: 25px 0;
+  float: left;
+}
+
+.menu-usuarios nav ul li a{
+  background: rgb(0, 26, 63);  
+  padding: 8px;
+  color: #fff;
+  border-radius: 10px;
+  font-weight: bold;
+}
+
+.menu-usuarios nav ul li a:hover{
+  background: rgb(139, 164, 177);
+  color: #000;
+}
+
+.menu-usuarios nav ul li i{    
+  margin-right: 5px;
+  font-size: 30px;
+}
 
 .contenido-usuarios {
   height: 100vh;
@@ -115,18 +150,19 @@ td {
   align-items: center;
   display: flex;
   float: right;
-  background: rgb(7, 142, 145);
+  background: rgb(0, 26, 63);
   padding: 4px;
-  width: 90px;
+  width: 70px;
   border-radius: 10px;
   cursor: pointer;
   
 }
 
 .boton:hover {
-  background: rgb(226, 203, 2);
+  background: rgb(139, 164, 177);
   color: #000;
 }
+
 
 /* -----------------------------ESTILOS PAGINA ACTUALIZACION DATOS----------------- */
 
@@ -139,13 +175,13 @@ td {
 .actualizacion h2 {
     text-align: center;     
     padding-left: 230px; 
-    line-height: 100px;
+    line-height: 70px;
 }
 
 .actualizacion form{
-    width: 65%;
+    width: 50%;
     text-align: center;
-    margin-left: 350px;
+    margin-left: 450px;
     border-radius: 10px;
     background: #24303c;
     padding: 10px;        
@@ -161,26 +197,37 @@ td {
     text-align: center;
 }
 
-.controls {
+.controls{
     width: 60%;    
     background: #24303c;
     padding: 10px;
     border-radius: 4px;
     margin-bottom: 30px;
-    border: 3px solid #00718b;
-    font-family: 'calibri';
-    font-size: 18px;
+    border: 3px solid rgb(0, 113, 139);
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 15px;
+    color: rgb(117, 117, 117);
 }
 
 .actualizacion_usuarios button{
     width: 30%;
     font-family: 'Courier New', Courier, monospace;
     font-weight: bold;
-    background: #00718b;
+    background: rgba(0, 113, 139, .4);
     border : none;
     padding: 12px;
     color : white;
     margin: 16px 0;
     font-size: 16px;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.actualizacion_usuarios button:hover{
+  background: rgba(0, 26, 63, .5);
+  color: #fff;
+  transform: scale(1.2);
+  transition: .3s;
+
 }
 
