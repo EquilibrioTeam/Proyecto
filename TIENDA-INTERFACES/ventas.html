@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Fuentes de Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+
+    <!-- Estilos y javascript de la ventana emergente -->
+    <link rel="stylesheet" href="CSS/ventas_css.css" /> 
+    <script src="js/emergente.js"></script>
+    <link rel="stylesheet" href="CSS/emergente.css">
+    <link rel="stylesheet" href="CSS/estilos-admin.css">
+
+    <!-- Estilos íconos para botones -->
+ 
+    <link rel="stylesheet" href="../images/icomoon/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+
+    <title>Módulo de Ventas</title>
+</head>
+<!-- HEADER PARA TODAS LAS PÁGINAS -->
+<header>
+    <div class="contenedor_header">
+        <div class="contenedor_logo_header">
+            <figure id="Logo_header">
+            </figure>
+        </div>
+        <div class="contendor_info_header">
+            <!-- BOTON REGISTRO DE VENTAS -->
+            <!-- Trigger/Open The Modal -->
+            <button id="myBtn">
+                Agregar Venta
+            </button>
+
+        </div>
+        <div class="buscar">
+            <input type="text" placeholder="ID de Venta / ID Cliente / Nombre Cliente">
+            <button id="myBtn">
+                Buscar
+            </button>
+        </div>
+        
+    </div>
+</header>
+
+<body>
+    <main>
+    <!-- Cuerpo menu lateral -->
+    <div class="barra-lateral">
+        <header>
+            <img src="../images/logo2.png" alt="logo">
+        </header>
+        <ul>
+            <li><a href="administracion.html"><i class="icon-dashboard"></i> Administración</a></i> </li>
+            <li><a href="ventas.html"><i class="icon-money"></i> Ventas</a></i></li>
+            <li><a href="usuarios.html"><i class="icon-users"></i> Usuarios</a></li>      
+        </ul>
+    </div>
+
+    
+
+
+    <!-- FORMULARIO DE VENTAS -->
+    
+    <div id="table">
+        <div class="col">
+            <div class="head">ID Venta</div>
+            <div class="head">Fecha de Compra</div>
+            <div class="head">Cantidad de elementos</div>
+            <div class="head">Valor de la compra</div>
+            <div class="head">Artículo comprado</div>
+            <div class="head">Vendedor</div>
+            <div class="head">Comprador</div>
+            <div class="head">ID Comprador</div>
+            <div class="head"></div>
+        </div>
+        <div class="col">
+            <div class="cel">V_001</div>
+            <div class="cel">03/10/2021 - 09:50 AM</div>
+            <div class="cel">1</div>
+            <div class="cel">$ 41.650</div>
+            <div class="cel">Zapatos Gamuza</div>
+            <div class="cel">David Duarte</div>
+            <div class="cel">Hugo Vega</div>
+            <div class="cel">C_001</div>
+            <div class="cel">
+                <div>
+                    <button class="btn_eliminar"><i class="fa fa-close"></i>  </button>
+                </div>
+                
+                <div>
+                    <button class="btn_editar"><i class="fa fa-edit"></i>  </button>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="cel">V_002</div>
+            <div class="cel">04/10/2021 - 12:50 PM</div>
+            <div class="cel">1</div>
+            <div class="cel">$ 65.000</div>
+            <div class="cel">Zapatillas Derportivas</div>
+            <div class="cel">Edwin Chica</div>
+            <div class="cel">Julián Vanegas</div>
+            <div class="cel">C_002</div>
+            <div class="cel"></div>
+        </div>
+
+        <div class="col">
+            <div class="foot"></div>
+            <div class="foot"></div>
+            <div class="foot"></div>
+            <div class="foot"></div>
+            <div class="foot"></div>
+            <div class="foot"></div>
+            <div class="foot"></div>
+            <div class="foot"></div>
+            <div class="foot"></div>
+        </div>
+    </div>
+
+    <div>
+
+        <!-- The Modal -->
+        <div id="myModal" class="modal">
+            <!-- Modal content -->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <span class="close">&times;</span>
+                    <h2>Registro de Venta</h2>
+                </div>
+                <div class="modal-body">
+                    <!-- DIV GENERAL DE LOS DATOS -->
+                    <div class="seccion_datos">
+                        <form action="">
+                            <!-- DIV CONTENEDOR DE REGISTRO VENTA -->
+                            <div class="Cont_Datos">
+                                <span class="form_text">Identificador de Producto</span>
+                                <label for="Id_producto">
+                                    <input type="text" name="Id_producto" class="input_producto" required placeholder="ID Producto" readonly value="P_001">
+                                </label>
+                                <br>
+                                <br>
+                                <span class="form_text">Identificador de la Venta</span>
+                                <label for="Id_venta">
+                                    <input type="text" name="Id_venta" class="input_producto" required placeholder="ID Venta" readonly value="V_001">
+                                </label>
+
+                                <div class="valor_producto">
+                                    <span class="form_text">Precio del Producto</span>
+                                    <label for="precio_siniva">
+                                        <input type="text" name="precio_siniva" class="input_producto" required placeholder="Precio Sin IVA" readonly value="$ 35.000">
+                                    </label>
+                                    <br>
+                                    <label for="precio_coniva">
+                                        <span class="form_text">Precio con IVA</span>
+                                        <input type="text" name="precio_coniva" class="input_producto" required placeholder="Precio + IVA" readonly value="$41.650">
+                                    </label>
+                                    <br>
+                                    <label for="fecha_compra">
+                                        <span class="form_text">Fecha y Hora de la Compra</span>
+                                        <input type="datetime-local" name="fecha_compra" class="input_producto" required >
+                                    </label>
+                                </div>
+                            </div>
+                            <!-- DIV CONTENEDOR DE LAS CARACTERÍSTICAS DEL PRODUCTO IMAGEN Y DECRIPCIÓN -->
+                            <div class="info_producto">
+                                <br>
+                                <span class="txt_division">Descripción del Producto</span> 
+                                <br>
+                                <Figure class="img_producto">
+                                    
+                                </Figure>
+                                <br>
+                                <div class="desc_producto">
+                                    <p>Color: Negro</p>
+                                    <p>Suela: Blanca</p>
+                                    <p>Material: Cuero</p>
+                                    <p>Cordones: Sí</p>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <hr>
+                    <!-- DIV DE REGISTRO DE COMPRADOR -->
+                    <div class="datos_comprador">
+                        <form action="">
+                            <br>
+                            <span class="txt_division">Registro de Comprador</span>
+                            <br>
+                            <div class="nb_cliente">
+                                <label for="nom_cliente">
+                                    <span>Nombre del comprador</span>
+                                    <input type="text" name="nom_cliente" class="input_cliente" id="nombre_cliente" required>
+                                </label>
+                            </div>
+                            <div class="apll_cliente">
+                                <label for="apel_cliente">
+                                    <span>Apellido del comprador</span>
+                                    <input type="text" class="input_cliente" id="apellido_cliente" required>
+                                </label>    
+                            </div>
+                            <div class="id_cliente">
+                                <label for="ID_cliente">
+                                    <span>Identificación del comprador</span>
+                                    <input type="number" class="input_cliente" id="idc_cliente" required>
+                                </label>
+                            </div>
+                            <div>
+                                <label for="registrar_venta">
+                                    <input type="button" name="registrar_Venta" id="btn_registro" value="Registrar"/>
+                                </label>
+                                
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    </main>
+</body>
+</html>

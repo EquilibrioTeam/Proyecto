@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://code.jquery.com/jquery-2.1.4.js"></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-compatible" content="ie=edge">
+    <link rel="stylesheet" href="/css/Style.css">
+    <link rel="stylesheet" href="/images/icomoon/style.css">
+    <link rel="stylesheet" href="CSS/estilos-admin.css">
+    <title>Registro de productos</title>
+</head>
+<body>
+    <!-- Barra lateral -->
+    <div class="barra-lateral">
+        <header>
+            <img src="../images/logo2.png" alt="logo">
+        </header>
+        <ul>
+            <li><a href="administracion.html"><i class="icon-dashboard"></i> Administración</a></i> </li>
+            <li><a href="ventas.html"><i class="icon-money"></i> Ventas</a></i></li>
+            <li><a href="usuarios.html"><i class="icon-users"></i> Usuarios</a></li>      
+        </ul>  
+    </div>    
+    <form id= "formulario"class="registro_productos">
+        <h4> REGISTRO DE PRODUCTOS</h4>
+        <input class="informacion" type="text" required name = "nombre_producto" id="nombre_producto" placeholder="Ingrese el nombre del producto">
+        <input class="informacion" type="text" required name = "tipo_producto" id="tipo_producto" placeholder="Ingrese el tipo de producto">  
+        <input class="informacion" type="text" required name = "referencia_producto" id="referencia_producto" placeholder="Ingrese la referencia del producto">  
+        <input class="informacion" type="number" required name = "talla_producto" id="talla_producto" placeholder="Ingrese la talla del producto">
+        <input class="informacion" type="text" required name = "marca_producto" id="marca_producto" placeholder="Ingrese la marca del producto">
+        <p>POR FAVOR INGRESE LA INFORMACION DEL PRODUCTO A REGISTRAR</p>
+        <button onclick= confirmacion()>Registrar producto</button>
+    </form>
+    <section class = "tabla_productos" id = "pr">    
+        <table class = "tabla_de_productos" id= "id_tabla_productos" contenteditable="true">
+            <tr contenteditable="false">
+                <th>
+                    Nombre del producto
+                </th>
+                <th>
+                    Tipo de producto
+                </th>
+                <th>
+                    Referencia del producto
+                </th>
+                <th>
+                    Talla del producto
+                </th>            
+                <th>
+                    Marca del producto
+                </th>      
+                <th>
+                    Eliminar
+                </th>              
+            </tr>
+            <tr class='noSearch hide'>
+                <td colspan="6"></td>
+            </tr>
+            <tr>
+                <td>
+                    Adidas Performance Coreracer  
+                </td>
+                <td>
+                    Zapatilla
+                </td>
+                <td>
+                    AD858SH62YNDCO
+                </td>
+                <td>
+                    41
+                </td>
+                <td>
+                    Adidas
+                </td>
+                <td><button class="borrar">Eliminar</button></td>
+            </tr>      
+        </table>
+        <form>
+            <input type="text" name = "producto_buscar" id="producto_buscar"  class = "buscar" placeholder="Ingrese nombre, marca, talla o referencia del producto" onkeyup= buscar() />  
+        </form>      
+    </section>
+</body>   
+<script language="javascript">
+    const form = document.getElementById("formulario")
+    const tab = document.getElementById("formulario")
+    form.addEventListener("submit", function(event){
+        event.preventDefault();                
+    }   
+    )
+    function confirmacion(){
+        let transactionFormData = new FormData(form);
+        alert('Se ha registrado el producto "'+form.querySelector("#tipo_producto").value+' '+form.querySelector("#nombre_producto").value+'" exitosamente')
+        let transactionTableRef = document.getElementById("id_tabla_productos");
+        let newTransactionRowRef = transactionTableRef.insertRow(-1)
+        let newTypeCellRef = newTransactionRowRef.insertCell(0)
+        newTypeCellRef.textContent= form.querySelector("#nombre_producto").value
+        newTypeCellRef = newTransactionRowRef.insertCell(1)
+        newTypeCellRef.textContent= form.querySelector("#tipo_producto").value
+        newTypeCellRef = newTransactionRowRef.insertCell(2)
+        newTypeCellRef.textContent= form.querySelector("#referencia_producto").value            
+        newTypeCellRef = newTransactionRowRef.insertCell(3)
+        newTypeCellRef.textContent= form.querySelector("#talla_producto").value       
+        newTypeCellRef = newTransactionRowRef.insertCell(4)
+        newTypeCellRef.textContent= form.querySelector("#marca_producto").value         
+        let newDeleteCell = newTransactionRowRef.insertCell(5);
+        let deleteButton = document.createElement("button");
+        deleteButton.textContent = "Eliminar";
+        newDeleteCell.appendChild(deleteButton);
+        deleteButton.addEventListener("click", (event) =>{ 
+            event.target.parentNode.parentNode.remove();
+            alert("Producto eliminado exitosamente");
+        }   
+        )
+    }
+    $(function () {
+        $(document).on('click', '.borrar', function (event) {
+            event.preventDefault();
+            $(this).closest('tr').remove();
+            alert("Producto eliminado exitosamente");
+        });
+    });
+    function buscar()
+    {
+        const tableReg = document.getElementById('id_tabla_productos');
+        const searchText = document.getElementById('producto_buscar').value.toLowerCase();
+        let total = 0;
+
+        // Recorremos todas las filas con contenido de la tabla
+        for (let i = 1; i < tableReg.rows.length; i++) {
+            // Si el td tiene la clase "noSearch" no se busca en su cntenido
+            if (tableReg.rows[i].classList.contains("noSearch")) {
+                continue;
+            }
+
+            let found = false;
+            const cellsOfRow = tableReg.rows[i].getElementsByTagName('td');
+            // Recorremos todas las celdas
+            for (let j = 0; j < cellsOfRow.length && !found; j++) {
+                const compareWith = cellsOfRow[j].innerHTML.toLowerCase();
+                // Buscamos el texto en el contenido de la celda
+                if (searchText.length == 0 || compareWith.indexOf(searchText) > -1) {
+                    found = true;
+                    total++;
+                }
+            }
+            if (found) {
+                tableReg.rows[i].style.display = '';
+            } else {
+                // si no ha encontrado ninguna coincidencia, esconde la
+                // fila de la tabla
+                tableReg.rows[i].style.display = 'none';
+            }
+        }
+
+        // mostramos las coincidencias
+        const lastTR=tableReg.rows[1];
+        const td=lastTR.querySelector("td");
+        lastTR.classList.remove("hide", "red");
+        if (searchText == "") {
+            lastTR.classList.add("hide");
+        } else if (total) {
+            td.innerHTML="Se ha encontrado "+total+" coincidencia"+((total>1)?"s":"");
+        } else {
+            lastTR.classList.add("red");
+            td.innerHTML="No se han encontrado coincidencias";
+        }
+    }
+</script>
+</html>
