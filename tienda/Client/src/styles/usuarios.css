@@ -1,92 +1,115 @@
-/* NAV */
-nav{
-    float: right;
-  }
-  
-  .menu-usuarios nav ul li{
-    /* margin-top: 20px; */
-    margin-right: 50px;
-    /* margin-left: 25px; */
-    padding: 25px 0;
-    float: left;
-  }
-  
-  .menu-usuarios nav ul li a{
-    width: 100%;
-    background: #00718b;
-    border : none;
-    padding: 12px;
-    color : white;
-    margin: 16px 0;
-    font-size: 16px;
-  }
-  
-  .menu-usuarios nav ul li a:hover{
-    background: rgb(139, 164, 177);
-    color: #000;
-    border-radius: 25px;
-  }
-  
-  .menu-usuarios nav ul li i{    
-    margin-right: 5px;
-    font-size: 30px;
-  }
+.registro_usuarios {
+  width: 500px;
+  height: 600px;
+  background: #24303c;
+  padding: 40px;
+  margin-top: 50px;
 
-/* TABLA USUARIOS */
-.contenido-usuarios {
-    height: 100vh;
-    width: 100%;
-    /* margin-left: 300px; */
-    /* background: rgb(205, 216, 194); */
-    top: 0;
-  }
-
-  .contenido-usuarios h1 {
-    text-align: center;
-    padding-left: 12%;
-    line-height: 50px;
-    padding-left: 37%;
-    padding-top: 1%;
-  }
-
-  .contenido-usuarios table {
-    width: 78%;
-    text-align: center;
-    margin-left: calc(100% - 80%);
-  }
-
-  .contenido-usuarios table th {
-    font-size: 18px;
-    margin-bottom: 20px;
-    border: 3px solid #00718b;
-    text-align: center;
-    color: rgb(205, 225, 255);
-    background-color: rgba(75, 82, 177, 0.726);
-  }
-
-  .contenido-usuarios td {
-    background: #24303c;
-    border: 2px solid #00718b;
-    padding: 10px;
-    font-family: 'Raleway', sans-serif;
-    font-size: 18px;
-    text-align: center;
-    color : white;
+  /* Se le quita del 100% de la pantalla
+       el 18% que ocupa la barra lateral y se
+       adiciona 2% para que se pueda ver */
+  margin-left: calc(100% - 80%);
+  border-radius: 4px;
+  font-family: "Raleway", sans-serif;
+  color: white;
+  box-shadow: 7px 20px 37px #00718b;
 }
 
-.boton {
-    width: 100%;
-    background: #00718b;
-    border : none;
-    padding: 12px;
-    color : white;
-    margin: 16px 0;
-    font-size: 16px;
-    
-  }
-  
-  .boton:hover {
-    background: rgb(139, 164, 177);
-    color: #000;
-  }
-  
+.registro_usuarios h4 {
+  font-size: 22px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.informacion {
+  width: 100%;
+  background: #24303c;
+  padding: 10px;
+  border-radius: 4px;
+  margin-bottom: 30px;
+  border: 3px solid #00718b;
+  color: white;
+  font-family: "Raleway", sans-serif;
+  font-size: 18px;
+}
+
+.registro_usuarios p {
+  height: 40px;
+  text-align: center;
+  font-size: 18px;
+}
+
+.registro_usuarios button {
+  width: 100%;
+  background: #00718b;
+  border: none;
+  padding: 12px;
+  color: white;
+  margin: 16px 0;
+  font-size: 16px;
+}
+
+.tabla_usuarios {
+  height: 600px;
+  width: 40%;
+  background: #24303c;
+  padding: 10px;
+  margin: auto;
+  margin-top: calc(10% - 46%);
+  margin-right: 4%;
+  border-radius: 4px;
+  font-family: "Raleway", sans-serif;
+  color: white;
+  box-shadow: 7px 20px 37px #00718b;
+  float: right;
+}
+
+.tabla_usuarios th {
+  font-size: 18px;
+  margin-bottom: 20px;
+  border: 3px solid #00718b;
+  text-align: center;
+  color: rgb(205, 225, 255);
+  background-color: rgba(75, 82, 177, 0.726);
+}
+
+.tabla_usuarios td {
+  /* width: 100%; */
+  background: #24303c;
+  border: 2px solid #00718b;
+  padding: 10px;
+  font-family: "Raleway", sans-serif;
+  font-size: 18px;
+  text-align: center;
+}
+
+.tabla_usuarios button {
+  width: 100%;
+  background: #00718b;
+  border: none;
+  padding: 4px;
+  color: white;
+  margin: 16px 0;
+  font-size: 20px;
+}
+
+.buscar {
+  width: 97%;
+  background: #24303c;
+  padding: 10px;
+  border-radius: 4px;
+  margin-bottom: 30px;
+  margin-top: 10px;
+  border: 3px solid #00718b;
+  font-family: "Raleway", sans-serif;
+  font-size: 18px;
+  color: white;
+  text-align: center;
+}
+
+.hide {
+  display: none;
+}
+.red {
+  color: red;
+}

@@ -9,7 +9,7 @@ import "styles/agregar_venta.css";
 
 import VentaAdmin from "./pages/ventas";
 import Index1 from "./pages/Index";
-import Usuarios from "pages/usuarios";
+import Usuarios from "pages/Usuarios";
 import Login from "pages/Login";
 import Administracion from "pages/Administracion";
 import AgregarVenta from "pages/agregar_venta";
@@ -25,7 +25,7 @@ function App() {
           <Route path="/actualizacion" component={Actualizacion}>
             <Actualizacion />
           </Route>
-          <Route path="/usuarios" component={Usuarios}>
+          <Route path="/Usuarios" component={Usuarios}>
             <Usuarios />
           </Route>
           <Route path="/agregar_venta" component={AgregarVenta}>
