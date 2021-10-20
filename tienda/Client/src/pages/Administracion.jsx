@@ -3,7 +3,7 @@ import Layoutadmin from "layouts/LayoutAdmin";
 import axios from "axios";
 
 function Administracion() {
-  const uri = "http://localhost:8080";
+  const uri = "http://localhost:8080/Administrador";
   const [data, setData] = useState({
     nombre_producto: "",
     tipo_producto: "",

@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 const user = "Julac";
-const password = "Arbey3104184248";
+const password = "HyQoDAmzIaotwY1N";
 const db = "cluster0";
 const uri = `mongodb+srv://${user}:${password}@cluster0.d23en.mongodb.net/${db}?retryWrites=true&w=majority`;
 
@@ -15,4 +15,3 @@ mongoose
   .catch((e) => console.error(e));
 
 module.exports = mongoose.connection;
-
