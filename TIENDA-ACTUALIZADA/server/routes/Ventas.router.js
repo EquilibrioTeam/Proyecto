@@ -1,10 +1,7 @@
 const express = require("express");
 const router = express.Router();
 const Venta = require("../models/Venta");
-const mongoose = require("mongoose");
 
-//connecting with DB
-require("../config/database");
 
 //middlewares
 router.use(express.json());

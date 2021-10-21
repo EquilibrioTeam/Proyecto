@@ -1,10 +1,6 @@
 const express = require("express");
 const router = express.Router();
 const User = require("../models/Usuarios");
-const mongoose = require("mongoose");
-
-//connecting with DB
-require("../config/database");
 
 //middlewares
 router.use(express.json());

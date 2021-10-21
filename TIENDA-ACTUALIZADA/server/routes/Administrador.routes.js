@@ -1,10 +1,6 @@
 const express = require("express");
 const router = express.Router();
 const Product = require("../models/producto");
-const mongoose = require("mongoose");
-
-//connecting with DB
-require("../config/database");
 
 //middlewares
 router.use(express.json());
@@ -18,6 +14,25 @@ router.get("/", async (req, res) => {
 router.post("/", async (req, res) => {
   await Product.insertMany(req.body);
   console.log(req.body);
+  const products = await Product.find();
+  res.json(products);
+});
+
+router.delete("/", async (req, res) => {
+  await Product.findOneAndDelete({ _id: req.body });
+  console.log(req.body);
+  const products = await Product.find();
+  res.json(products);
+});
+
+router.put("/:id", async (req, res) => {
+  const id = req.params.id;
+  await Product.findOneAndUpdate(
+    { _id: id },
+    {
+      $set: { ...req.body },
+    }
+  );
   const products = await Product.find();
   res.json(products);
 });
