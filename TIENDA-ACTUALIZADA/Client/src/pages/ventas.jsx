@@ -18,6 +18,10 @@ function Ventas() {
     setData({ ...data, [e.target.name]: e.target.value });
   };
   const [filas, setFilas] = useState([]);
+  const [filaParaEditar, setFilaParaEditar] = useState({
+    isEditing: false,
+    id: "",
+  });
   const onSubmitForm = async (e) => {
     e.preventDefault();
     await axios
@@ -36,12 +40,54 @@ function Ventas() {
       id_comprador: "",
     });
   };
-  const handleEliminarFila = (referencia_producto) => {
-    const copia = [...filas];
-    const nuevasFilas = copia.filter(
-      (fila) => fila.referencia_producto !== referencia_producto
-    );
-    setFilas(nuevasFilas);
+  const handleEliminarFila = async (id) => {
+    await axios
+      .delete(uri, { data: { _id: id } })
+      .then(({ data }) => setFilas(data))
+      .finally(() => alert("Venta eliminada exitosamente"))
+      .catch((e) => console.error(e));
+  };
+  const handleEditarFila = (id) => {
+    setFilaParaEditar({ ...filaParaEditar, isEditing: true, id: id });
+    const buscarFila = filas.find((fila) => fila._id === id);
+    setData({
+      id_venta: buscarFila.id_venta,
+      fecha_compra: buscarFila.fecha_compra,
+      cantidad: buscarFila.cantidad,
+      valor_compra: buscarFila.valor_compra,
+      articulo: buscarFila.articulo,
+      vendedor: buscarFila.vendedor,
+      comprador: buscarFila.comprador,
+      id_comprador: buscarFila.id_comprador,
+    });
+  };
+  const onActualizarVenta = async (e) => {
+    e.preventDefault();
+    await axios
+      .put(uri + `/${filaParaEditar.id}`, {
+        id_venta: data.id_venta,
+        fecha_compra: data.fecha_compra,
+        cantidad: data.cantidad,
+        valor_compra: data.valor_compra,
+        articulo: data.articulo,
+        vendedor: data.vendedor,
+        comprador: data.comprador,
+        id_comprador: data.id_comprador,
+      })
+      .then(({ data }) => setFilas(data))
+      .finally(() => alert("Venta actualizada exitosamente"))
+      .catch((e) => console.error(e));
+    setFilaParaEditar({ ...filaParaEditar, isEditing: false, id: "" });
+    setData({
+      id_venta: "",
+      fecha_compra: "",
+      cantidad: "",
+      valor_compra: "",
+      articulo: "",
+      vendedor: "",
+      comprador: "",
+      id_comprador: "",
+    });
   };
   const [buscar, setBuscar] = useState("");
   const fetchData = async () => {
@@ -53,7 +99,12 @@ function Ventas() {
   //console.log(filas);
   return (
     <Layoutadmin>
-      <form className="registro_productos" onSubmit={(e) => onSubmitForm(e)}>
+      <form
+        className="registro_productos"
+        onSubmit={(e) => {
+          !filaParaEditar.isEditing ? onSubmitForm(e) : onActualizarVenta(e);
+        }}
+      >
         <h4> REGISTRO DE VENTAS</h4>
         <input
           onChange={(e) => onChangeInput(e)}
@@ -136,14 +187,15 @@ function Ventas() {
           required
         />
         <p>POR FAVOR INGRESE LA INFORMACION DE LA VENTA</p>
-        <button type="submit"> Registrar venta </button>
+        <button type="submit">
+          {" "}
+          {!filaParaEditar.isEditing
+            ? "Registrar venta"
+            : "Actualizar venta"}{" "}
+        </button>
       </form>
       <section className="tabla_productos" id="pr">
-        <table
-          className="tabla_de_productos"
-          id="id_tabla_productos"
-          contenteditable="true"
-        >
+        <table className="tabla_de_productos">
           <thead>
             <tr>
               <th>ID venta</th>
@@ -174,14 +226,19 @@ function Ventas() {
                   <td>{fila.vendedor}</td>
                   <td>{fila.comprador}</td>
                   <td>{fila.id_comprador}</td>
-                  <td>
+                  <td style={{ display: "flex" }}>
                     <button
                       className="borrar"
-                      onClick={() =>
-                        handleEliminarFila(fila.referencia_producto)
-                      }
+                      onClick={() => handleEliminarFila(fila._id)}
                     >
                       <i className="fa fa-close"></i>
+                    </button>
+                    <button
+                      style={{ marginLeft: "2px" }}
+                      className="Editar"
+                      onClick={() => handleEditarFila(fila._id)}
+                    >
+                      <i className="fa fa-edit"></i>
                     </button>
                   </td>
                 </tr>

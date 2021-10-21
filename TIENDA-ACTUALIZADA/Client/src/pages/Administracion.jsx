@@ -38,6 +38,7 @@ function Administracion() {
     await axios
       .delete(uri, { data: { _id: id } })
       .then(({ data }) => setFilas(data))
+      .finally(() => alert("Producto eliminado exitosamente"))
       .catch((e) => console.error(e));
   };
   const handleEditarFila = (id) => {
@@ -62,6 +63,7 @@ function Administracion() {
         marca_producto: data.marca_producto,
       })
       .then(({ data }) => setFilas(data))
+      .finally(() => alert("Producto actualizado exitosamente"))
       .catch((e) => console.error(e));
     setFilaParaEditar({ ...filaParaEditar, isEditing: false, id: "" });
     setData({
