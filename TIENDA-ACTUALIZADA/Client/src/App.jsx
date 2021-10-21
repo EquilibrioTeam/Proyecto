@@ -7,12 +7,12 @@ import "media/icomoon/style.css";
 import "styles/actualizacion.css";
 import "styles/agregar_venta.css";
 
-import VentaAdmin from "./pages/Ventas";
+import VentaAdmin from "./pages/ventas";
 import Index1 from "./pages/Index";
 import Usuarios from "pages/Usuarios";
 import Login from "pages/Login";
 import Administracion from "pages/Administracion";
-import AgregarVenta from "pages/agregar_venta";
+// import AgregarVenta from "pages/agregar_venta";
 
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Actualizacion from "pages/actualizacion";
@@ -28,9 +28,9 @@ function App() {
           <Route path="/Usuarios" component={Usuarios}>
             <Usuarios />
           </Route>
-          <Route path="/agregar_venta" component={AgregarVenta}>
+          {/* <Route path="/agregar_venta" component={AgregarVenta}>
             <AgregarVenta />
-          </Route>
+          </Route> */}
           <Route path="/Ventas" component={VentaAdmin}>
             <VentaAdmin />
           </Route>

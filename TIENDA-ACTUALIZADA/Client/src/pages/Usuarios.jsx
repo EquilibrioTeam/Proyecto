@@ -111,6 +111,7 @@ function Usuarios() {
         }}
       >
         <h4> REGISTRO DE USUARIOS</h4>
+        <p>POR FAVOR INGRESE LA INFORMACION DEL USUARIO A REGISTRAR</p>
         <input
           onChange={(e) => onChangeInput(e)}
           className="informacion"
@@ -181,10 +182,10 @@ function Usuarios() {
           value={data.correo}
           required
         />
-        <label htmlFor="rol">Seleccion el rol</label>
+        <label className="titulo_select" htmlFor="rol">Seleccione el rol</label>
         <select
           id="rol"
-          className="informacion"
+          className="informacion_select"
           name="rol"
           value={data.rol}
           onChange={(e) => onChangeInput(e)}
@@ -192,10 +193,10 @@ function Usuarios() {
           <option value="Administrador">Administrador</option>
           <option value="Vendedor">Vendedor</option>
         </select>
-        <label htmlFor="estado">Seleccion el estado</label>
+        <label className="titulo_select" htmlFor="estado">Seleccion el estado</label>
         <select
           id="estado"
-          className="informacion"
+          className="informacion_select"
           name="estado"
           value={data.estado}
           onChange={(e) => onChangeInput(e)}
@@ -203,7 +204,7 @@ function Usuarios() {
           <option value="Activo">Activo</option>
           <option value="Inactivo">Inactivo</option>
         </select>
-        <p>POR FAVOR INGRESE LA INFORMACION DEL USUARIO A REGISTRAR</p>
+        
         <button type="submit">
           {" "}
           {!filaParaEditar.isEditing
@@ -216,7 +217,7 @@ function Usuarios() {
           <thead>
             <tr>
               <th>Nombre de usuario</th>
-              <th>TNombre</th>
+              <th>Nombre</th>
               <th>Apellido</th>
               <th>Identificación</th>
               <th>Telefono</th>
@@ -224,7 +225,7 @@ function Usuarios() {
               <th>Correo electronico</th>
               <th>Rol</th>
               <th>Estado</th>
-              <th>Eliminar</th>
+              <th>Acciones</th>
             </tr>
           </thead>
           <tbody>

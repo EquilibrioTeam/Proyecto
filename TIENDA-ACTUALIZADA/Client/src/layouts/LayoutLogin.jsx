@@ -6,7 +6,6 @@ const LayoutLogin = () => {
     <div>
       <body className="Body_login">
         <section>
-          <figure class="cont_logo"></figure>
           <figure class="letras_logo"></figure>
         </section>
         <section className="Contenedor_form">

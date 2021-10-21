@@ -93,6 +93,7 @@ function Administracion() {
         }}
       >
         <h4> REGISTRO DE PRODUCTOS</h4>
+        <p>POR FAVOR INGRESE LA INFORMACION DEL PRODUCTO A REGISTRAR</p>
         <input
           onChange={(e) => onChangeInput(e)}
           className="informacion"
@@ -143,7 +144,7 @@ function Administracion() {
           value={data.marca_producto}
           required
         />
-        <p>POR FAVOR INGRESE LA INFORMACION DEL PRODUCTO A REGISTRAR</p>
+        
         <button type="submit">
           {" "}
           {!filaParaEditar.isEditing
