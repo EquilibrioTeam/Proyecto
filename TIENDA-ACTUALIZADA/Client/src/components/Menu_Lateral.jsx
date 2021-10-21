@@ -17,7 +17,7 @@ const MenuLateral = () => {
           </li>
           <li>
             <i className="icon-money"></i>
-            <Link to="/ventas">Ventas</Link>
+            <Link to="/Ventas">Ventas</Link>
           </li>
           <li>
             <i className="icon-users"></i>

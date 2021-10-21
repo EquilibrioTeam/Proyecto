@@ -7,7 +7,7 @@ import "media/icomoon/style.css";
 import "styles/actualizacion.css";
 import "styles/agregar_venta.css";
 
-import VentaAdmin from "./pages/ventas";
+import VentaAdmin from "./pages/Ventas";
 import Index1 from "./pages/Index";
 import Usuarios from "pages/Usuarios";
 import Login from "pages/Login";
@@ -31,7 +31,7 @@ function App() {
           <Route path="/agregar_venta" component={AgregarVenta}>
             <AgregarVenta />
           </Route>
-          <Route path="/ventas" component={VentaAdmin}>
+          <Route path="/Ventas" component={VentaAdmin}>
             <VentaAdmin />
           </Route>
           <Route path="/producto" component={Administracion}>
