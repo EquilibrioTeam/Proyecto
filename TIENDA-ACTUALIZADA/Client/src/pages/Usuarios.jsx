@@ -181,26 +181,28 @@ function Usuarios() {
           value={data.correo}
           required
         />
-        <input
-          onChange={(e) => onChangeInput(e)}
-          className="informacion"
-          type="text"
-          name="rol"
+        <label htmlFor="rol">Seleccion el rol</label>
+        <select
           id="rol"
-          placeholder="Ingrese el rol"
-          value={data.rol}
-          required
-        />
-        <input
-          onChange={(e) => onChangeInput(e)}
           className="informacion"
-          type="text"
-          name="estado"
+          name="rol"
+          value={data.rol}
+          onChange={(e) => onChangeInput(e)}
+        >
+          <option value="Administrador">Administrador</option>
+          <option value="Vendedor">Vendedor</option>
+        </select>
+        <label htmlFor="estado">Seleccion el estado</label>
+        <select
           id="estado"
-          placeholder="Ingrese el estado"
+          className="informacion"
+          name="estado"
           value={data.estado}
-          required
-        />
+          onChange={(e) => onChangeInput(e)}
+        >
+          <option value="Activo">Activo</option>
+          <option value="Inactivo">Inactivo</option>
+        </select>
         <p>POR FAVOR INGRESE LA INFORMACION DEL USUARIO A REGISTRAR</p>
         <button type="submit">
           {" "}
