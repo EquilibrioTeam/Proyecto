@@ -96,7 +96,7 @@ function Administracion() {
         <p>POR FAVOR INGRESE LA INFORMACION DEL PRODUCTO A REGISTRAR</p>
         <input
           onChange={(e) => onChangeInput(e)}
-          className="informacion"
+          className="informacion_productos"
           type="text"
           name="nombre_producto"
           id="nombre_producto"
@@ -106,7 +106,7 @@ function Administracion() {
         />
         <input
           onChange={(e) => onChangeInput(e)}
-          className="informacion"
+          className="informacion_productos"
           type="text"
           name="tipo_producto"
           id="tipo_producto"
@@ -116,7 +116,7 @@ function Administracion() {
         />
         <input
           onChange={(e) => onChangeInput(e)}
-          className="informacion"
+          className="informacion_productos"
           type="text"
           name="referencia_producto"
           id="referencia_producto"
@@ -126,7 +126,7 @@ function Administracion() {
         />
         <input
           onChange={(e) => onChangeInput(e)}
-          className="informacion"
+          className="informacion_productos"
           type="text"
           name="talla_producto"
           id="talla_producto"
@@ -136,7 +136,7 @@ function Administracion() {
         />
         <input
           onChange={(e) => onChangeInput(e)}
-          className="informacion"
+          className="informacion_productos"
           type="text"
           name="marca_producto"
           id="marca_producto"

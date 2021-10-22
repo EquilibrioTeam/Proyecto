@@ -35,7 +35,11 @@ function Index(){
                 {/* <!-- BARRA DE MENU --> */}
                 <div className="contenido">
                     <p className="descripcion">
-                        Loren ipsum dolor sit amet consectetur, adipisicing elit. <br/>  Praesentium quam quasi, delectus autem ducimus a. <br/>  Rerum pariatur, quibusdam impedit nobis sit <br/> dignissimos earum provident. <br/>  Blanditiis officia laborum vel fugit quisquam.
+                        Bienvenidos a su tienda ComprAEqui <br/> 
+                        aquí encontrará todas las marcas y referencias <br/>
+                        de su calzado favorito, por favor sientase en  <br/> 
+                        confianza e ingrese a nuestra tienda en donde <br/> 
+                        encontrará grandes descuentos
                     </p>
                 </div>
             </div>

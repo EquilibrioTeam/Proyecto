@@ -19,8 +19,7 @@
 .menu {
   width: 100%;
   height: 75px;
-  /* float: left; */
-  padding-left: calc(100% - 70%);
+  padding-left: calc(100% - 83%);
 }
 
 .barra {
@@ -32,10 +31,8 @@
 
 .logo {
   width: 50%;
-  height: 90%;
+  height: 70%;
   padding-top: 1%;
-  /* padding-left: calc(70% - 41%); */
-  /* float: left; */
 }
 
 .items {

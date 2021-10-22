@@ -100,12 +100,13 @@ function Ventas() {
   return (
     <Layoutadmin>
       <form
-        className="registro_productos"
+        className="registro_ventas"
         onSubmit={(e) => {
           !filaParaEditar.isEditing ? onSubmitForm(e) : onActualizarVenta(e);
         }}
       >
         <h4> REGISTRO DE VENTAS</h4>
+        <p>POR FAVOR INGRESE LA INFORMACION DE LA VENTA</p>
         <input
           onChange={(e) => onChangeInput(e)}
           className="informacion"
@@ -119,7 +120,7 @@ function Ventas() {
         <input
           onChange={(e) => onChangeInput(e)}
           className="informacion"
-          type="text"
+          type="datetime-local"
           name="fecha_compra"
           id="fecha_compra"
           placeholder="Ingrese la fecha de la compra"
@@ -186,7 +187,7 @@ function Ventas() {
           value={data.id_comprador}
           required
         />
-        <p>POR FAVOR INGRESE LA INFORMACION DE LA VENTA</p>
+        
         <button type="submit">
           {" "}
           {!filaParaEditar.isEditing
@@ -194,7 +195,7 @@ function Ventas() {
             : "Actualizar venta"}{" "}
         </button>
       </form>
-      <section className="tabla_productos" id="pr">
+      <section className="tabla_ventas" id="pr">
         <table className="tabla_de_productos">
           <thead>
             <tr>
