@@ -63,7 +63,7 @@
 
 .tabla_usuarios {
   height: fit-content;
-  width: 1200px;
+  width: fit-content;
   background: #24303c;
   padding: 10px;
   margin: auto;
@@ -90,10 +90,11 @@
   /* width: 100%; */
   background: #24303c;
   border: 2px solid #00718b;
-  padding: 10px;
+  padding: 7px;
   font-family: "Raleway", sans-serif;
-  font-size: 18px;
+  font-size: 16px;
   text-align: center;
+  height: 60px;
 }
 
 .tabla_usuarios button {
