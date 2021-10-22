@@ -182,7 +182,9 @@ function Usuarios() {
           value={data.correo}
           required
         />
-        <label className="titulo_select" htmlFor="rol">Seleccione el rol</label>
+        {/* <label className="titulo_select" htmlFor="rol">
+          Seleccione el rol
+        </label> */}
         <select
           id="rol"
           className="informacion_select"
@@ -190,10 +192,11 @@ function Usuarios() {
           value={data.rol}
           onChange={(e) => onChangeInput(e)}
         >
+          <option value="Seleccion_rol">Seleccione el Rol</option>
           <option value="Administrador">Administrador</option>
           <option value="Vendedor">Vendedor</option>
         </select>
-        <label className="titulo_select" htmlFor="estado">Seleccion el estado</label>
+        {/* <label className="titulo_select" htmlFor="estado">Seleccion el estado</label> */}
         <select
           id="estado"
           className="informacion_select"
@@ -201,10 +204,11 @@ function Usuarios() {
           value={data.estado}
           onChange={(e) => onChangeInput(e)}
         >
+          <option value="Seleccion_estado">Seleccione el Estado</option>
           <option value="Activo">Activo</option>
           <option value="Inactivo">Inactivo</option>
         </select>
-        
+
         <button type="submit">
           {" "}
           {!filaParaEditar.isEditing
