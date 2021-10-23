@@ -1,6 +1,5 @@
 import "styles/App.css";
 import "styles/estilos.css";
-import "styles/Login.css";
 import "styles/administracion.css";
 import "styles/usuarios.css";
 import "media/icomoon/style.css";
@@ -10,7 +9,6 @@ import "styles/ventas.css"
 import VentaAdmin from "./pages/Ventas";
 import Index1 from "./pages/Index";
 import Usuarios from "pages/Usuarios";
-import Login from "pages/Login";
 import Administracion from "pages/Administracion";
 
 
@@ -30,9 +28,6 @@ function App() {
           </Route>
           <Route path="/producto" component={Administracion}>
             <Administracion />
-          </Route>
-          <Route path="/login" component={Login}>
-            <Login />
           </Route>
           <Route path="/">
             <Index1 />
