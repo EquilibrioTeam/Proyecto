@@ -1,7 +1,14 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import GoogleLogin from "react-google-login";
+import { useHistory } from "react-router-dom";
 
 const LayoutLogin = () => {
+  let history = useHistory();
+  const responseGoogle = (response) => {
+    console.log(response.profileObj.email);
+    history.push("/Usuarios");
+  };
   return (
     <div>
       <body className="Body_login">
@@ -59,6 +66,14 @@ const LayoutLogin = () => {
             <p id="registro">Registrarse</p>
           </Link>
         </section>
+        <GoogleLogin
+          clientId="808256838062-lrn2slb1qcc4f33h08aqmbk0gol7bsi9.apps.googleusercontent.com"
+          buttonText="Iniciar Sesión"
+          onSuccess={responseGoogle}
+          onFailure={responseGoogle}
+          redirectUri="http://localhost:3000/Usuarios"
+          cookiePolicy={"single_host_origin"}
+        />
       </body>
     </div>
   );
